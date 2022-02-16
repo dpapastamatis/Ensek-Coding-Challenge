@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnsekCodingChallenge", "ThemisCodingChallenge\EnsekCodingChallenge.csproj", "{1634841A-55A5-4680-A8ED-88DBF1782A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnsekCodingChallenge.Tests", "EnsekCodingChallenge.Tests\EnsekCodingChallenge.Tests.csproj", "{8A62E0FC-6C2D-410C-8B43-D5686C116E7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1634841A-55A5-4680-A8ED-88DBF1782A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1634841A-55A5-4680-A8ED-88DBF1782A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1634841A-55A5-4680-A8ED-88DBF1782A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1634841A-55A5-4680-A8ED-88DBF1782A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A62E0FC-6C2D-410C-8B43-D5686C116E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A62E0FC-6C2D-410C-8B43-D5686C116E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A62E0FC-6C2D-410C-8B43-D5686C116E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A62E0FC-6C2D-410C-8B43-D5686C116E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70CADE4B-5742-4C30-87A2-F9BC3B617FFD}
+	EndGlobalSection
+EndGlobal

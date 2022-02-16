@@ -1,0 +1,76 @@
+﻿
+<h1>Employees</h1>
+<button type="button" onclick="location.href='@Url.Action("New", "Employees")'" style="margin-bottom:10px" class="btn btn-primary btn-lg">New Employee</button>
+<table id="employees" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                <h5><b>Name</b></h5>
+            </th>
+            <th>
+                <h5><b>Salary</b></h5>
+            </th>
+            <th>
+                <h5><b>Age</b></h5>
+            </th>
+            <th>
+                <h5><b>Delete</b></h5>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            //DOM manipulation code start
+            var table = $("#employees").DataTable({
+                ajax: {
+                    url: "/api/employees",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "employee_name",
+                        render: function (data, type, employee) {
+                            return "<a href='/employees/edit/" + employee.id + "'>" + employee.employee_name + "</a>";
+                        }
+                    },
+                    {
+                        data: "employee_salary"
+                    },
+                    {
+                        data: "employee_age"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button data-employee-id=" + data + " class = 'btn-link js-delete' >Delete</button>";
+                        }
+                    }
+                ]
+            });
+
+
+            $("#employees").on("click", ".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete this employee?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/employees/" + button.attr("data-employee-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                })
+            });
+            //DOM manipulation code end
+        });
+    </script>
+}
+
